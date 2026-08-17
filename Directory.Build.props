@@ -1,0 +1,20 @@
+<Project>
+
+  <!-- One place for settings every sample shares. Add a property here rather than
+       repeating it across 24 .csproj files. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Samples are read as much as they are run, so keep them warning-clean. Not
+         errors — a reader cloning this should never be blocked by a style nit. -->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+
+    <!-- Package versions are pinned per project rather than floated, so a clone in two
+         years still restores the versions the articles were written against. -->
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+</Project>

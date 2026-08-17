@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "JorgenHoc.EfCoreNPlusOne": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "Show SQL": {
+      "commandName": "Project",
+      "commandLineArgs": "--sql",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

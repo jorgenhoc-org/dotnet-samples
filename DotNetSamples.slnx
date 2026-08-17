@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/shared/">
+    <Project Path="shared/JorgenHoc.DataAccess/JorgenHoc.DataAccess.csproj" />
+    <Project Path="shared/JorgenHoc.Diagnostics/JorgenHoc.Diagnostics.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
+    <Project Path="samples/web/JorgenHoc.SampleWeb/JorgenHoc.SampleWeb.csproj" />
+  </Folder>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/JorgenHoc.Benchmarks/JorgenHoc.Benchmarks.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <!-- Relational (not the full SqlServer provider) is all this needs: RelationalEventId
+         and the LogTo overloads. Keeps the harness usable from a SQLite sample too. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

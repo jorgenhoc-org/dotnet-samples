@@ -1,0 +1,27 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
+
+## BenchmarkDotNet
+BenchmarkDotNet.Artifacts/
+
+## Local configuration — never commit real connection strings or secrets
+appsettings.Local.json
+appsettings.*.Local.json
+*.env
+.env
+
+## OS noise
+.DS_Store
+Thumbs.db

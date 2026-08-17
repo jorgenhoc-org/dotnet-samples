@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <!-- Both packages are required. The AspNetCore package gives you request timings and
+         the overlay; without MiniProfiler.EntityFrameworkCore the query list is empty,
+         which looks exactly like "MiniProfiler doesn't work". -->
+    <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.5.4" />
+    <PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\JorgenHoc.DataAccess\JorgenHoc.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
