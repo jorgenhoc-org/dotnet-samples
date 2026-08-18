@@ -41,10 +41,11 @@ to the non-root user rather than silently running as root.
 HEALTHCHECK CMD wget -qO- http://localhost:8080/health || exit 1
 ```
 
-assumes `wget` is in the runtime image. The `mcr.microsoft.com/dotnet/aspnet` images are
-deliberately minimal and ship neither `wget` nor `curl`. When the binary is missing the
-check does not error loudly — it just fails, and Docker marks a perfectly healthy container
-`unhealthy`. `compare-image-sizes.sh` reports which tools are actually present.
+assumes `wget` is in the runtime image. Measured on the .NET 10 images: the **Debian**
+image ships neither `wget` nor `curl` (and the check does not error loudly — it just fails,
+and Docker marks a perfectly healthy container `unhealthy`); **Alpine** does have BusyBox
+`wget`, so the pattern happens to work there; **chiseled** has no shell at all.
+`compare-image-sizes.sh` reports which tools are actually present rather than assuming.
 
 **Chiseled images cannot have a `HEALTHCHECK` at all.** `HEALTHCHECK CMD` runs its argument
 through `/bin/sh`, and chiseled images contain no shell. That is not a limitation to work
@@ -62,9 +63,10 @@ re-download every package on any code edit — the single most common Dockerfile
 **`-p:UseAppHost=false`.** The native apphost bootstraps the runtime for `./MyApp`. In a
 container you run `dotnet MyApp.dll`, so it is dead weight.
 
-**Non-root differs per base image.** Debian uses `adduser --system --ingroup`; Alpine's
-BusyBox `adduser` takes `-S -G`; chiseled already ships a non-root `app` user and has no
-shell to create one with. The same three lines do not work across all three.
+**Non-root is one line now: `USER app`.** Every .NET 8+ image — Debian, Alpine and
+chiseled alike — ships a built-in non-root `app` user (UID 1654). The classic
+`RUN adduser ...` pattern is not just unnecessary, it **fails with exit 127** on the .NET 10
+Debian image, whose slim base no longer includes `adduser`/`addgroup` at all.
 
 **`TargetFramework` is in the `.csproj`, not inherited.** The Docker build context is this
 folder, so the repo-root `Directory.Build.props` is not visible inside the image. Every

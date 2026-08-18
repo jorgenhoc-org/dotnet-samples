@@ -43,7 +43,8 @@ for entry in "${VARIANTS[@]}"; do
     size=$(docker image inspect "$REPO:$tag" --format '{{.Size}}' 2>/dev/null) || continue
     [ -z "$base_size" ] && base_size="$size"
     rel=$(awk -v s="$size" -v b="$base_size" 'BEGIN { printf "%.2fx", s/b }')
-    printf '| %-28s | %15s MB | %8s |\n' "aspnet:10.0${tag:+-$tag}" "$(mb "$size")" "$rel"
+    label="aspnet:10.0-$tag"; [ "$tag" = "debian" ] && label="aspnet:10.0 (Debian)"
+    printf '| %-28s | %15s MB | %8s |\n' "$label" "$(mb "$size")" "$rel"
 done
 
 echo
@@ -79,3 +80,12 @@ for entry in "${VARIANTS[@]}"; do
     fi
     docker rm -f "$cid" >/dev/null 2>&1
 done
+
+# Keep the window open when the script was launched by double-click (the window would
+# otherwise vanish with the output). Guarded on stdin being a TTY so piping the output
+# to a file or running in CI is unaffected.
+if [ -t 0 ]; then
+    echo
+    read -n 1 -s -r -p "Done — press any key to close..."
+    echo
+fi

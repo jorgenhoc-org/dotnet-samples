@@ -13,9 +13,6 @@ RUN dotnet publish "JorgenHoc.DotnetDockerContainer.csproj" \
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS final
 
-# Alpine uses BusyBox adduser — different flags from Debian's adduser.
-RUN addgroup -S appgroup && adduser -S -G appgroup appuser
-
 WORKDIR /app
 COPY --from=publish /app/publish .
 
@@ -23,5 +20,6 @@ ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
 EXPOSE 8080
 
-USER appuser
+# Same built-in non-root user as the Debian variant.
+USER app
 ENTRYPOINT ["dotnet", "JorgenHoc.DotnetDockerContainer.dll"]

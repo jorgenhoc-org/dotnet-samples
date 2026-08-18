@@ -13,8 +13,8 @@ RUN dotnet publish "JorgenHoc.DotnetDockerContainer.csproj" \
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled AS final
 
-# No RUN adduser here — there is no shell to run it with. Chiseled images ship a
-# non-root user `app` (UID 64198) already, so just select it.
+# No RUN adduser here — there is no shell to run it with. Chiseled images ship the same
+# built-in non-root `app` user (UID 1654) as every other .NET 8+ image, so just select it.
 WORKDIR /app
 COPY --from=publish /app/publish .
 
