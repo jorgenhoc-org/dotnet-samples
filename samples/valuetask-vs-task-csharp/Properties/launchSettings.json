@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "JorgenHoc.ValueTaskVsTask": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

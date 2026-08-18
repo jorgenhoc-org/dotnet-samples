@@ -29,7 +29,7 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | Article | Code |
 |---|---|
 | [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web/JorgenHoc.SampleWeb) (MiniProfiler) |
-| [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
+| [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`samples/valuetask-vs-task-csharp`](samples/valuetask-vs-task-csharp) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
 
 More being ported — one per article.
 

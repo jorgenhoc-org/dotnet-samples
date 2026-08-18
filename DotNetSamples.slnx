@@ -5,6 +5,7 @@
   </Folder>
   <Folder Name="/samples/">
     <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
+    <Project Path="samples/valuetask-vs-task-csharp/JorgenHoc.ValueTaskVsTask.csproj" />
     <Project Path="samples/web/JorgenHoc.SampleWeb/JorgenHoc.SampleWeb.csproj" />
   </Folder>
   <Folder Name="/benchmarks/">
