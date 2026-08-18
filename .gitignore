@@ -3,6 +3,10 @@
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+[Pp]ublish/
+
+## Deploy artifacts (produced by samples/*/deploy.sh)
+app.zip
 
 ## Visual Studio / Rider / VS Code
 .vs/

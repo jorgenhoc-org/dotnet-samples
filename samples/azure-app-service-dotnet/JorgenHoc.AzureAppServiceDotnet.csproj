@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- TargetFramework, Nullable etc. inherited from the repo-root Directory.Build.props. -->
+
+</Project>
