@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Brings EF Core SqlServer (and Microsoft.Data.SqlClient) transitively. -->
+    <ProjectReference Include="..\..\shared\JorgenHoc.DataAccess\JorgenHoc.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -32,6 +32,8 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`samples/valuetask-vs-task-csharp`](samples/valuetask-vs-task-csharp) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
 | [Dockerizing a .NET application](https://www.jorgenhoc.org/en/blog/dotnet-docker-container) | [`samples/dotnet-docker-container`](samples/dotnet-docker-container) |
 | [Azure App Service for .NET](https://www.jorgenhoc.org/en/blog/azure-app-service-dotnet) | [`samples/azure-app-service-dotnet`](samples/azure-app-service-dotnet) |
+| [EF Core vs Dapper](https://www.jorgenhoc.org/en/blog/ef-core-vs-dapper) | [`samples/ef-core-vs-dapper`](samples/ef-core-vs-dapper) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
+| [How to avoid async deadlocks](https://www.jorgenhoc.org/en/blog/async-deadlocks-csharp) | [`samples/async-deadlocks-csharp`](samples/async-deadlocks-csharp) |
 
 More being ported — one per article.
 
