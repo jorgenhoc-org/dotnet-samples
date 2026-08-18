@@ -16,7 +16,7 @@ dotnet build
 
 ```
 samples/<article-slug>/         one console project per article; folder name = article URL slug
-samples/web/JorgenHoc.SampleWeb/  shared ASP.NET Core host for MiniProfiler demos
+samples/web/                    shared ASP.NET Core host for MiniProfiler demos
 shared/JorgenHoc.DataAccess/    entities + DbContext for the EF Core articles
 shared/JorgenHoc.Diagnostics/   statement counting and reporting used across EF samples
 benchmarks/                     BenchmarkDotNet projects
@@ -28,8 +28,9 @@ Each `samples/` folder has its own README with what to run and what output to ex
 
 | Article | Code |
 |---|---|
-| [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web/JorgenHoc.SampleWeb) (MiniProfiler) |
+| [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web) (MiniProfiler) |
 | [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`samples/valuetask-vs-task-csharp`](samples/valuetask-vs-task-csharp) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
+| [Dockerizing a .NET application](https://www.jorgenhoc.org/en/blog/dotnet-docker-container) | [`samples/dotnet-docker-container`](samples/dotnet-docker-container) |
 
 More being ported — one per article.
 

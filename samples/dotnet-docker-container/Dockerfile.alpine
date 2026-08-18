@@ -1,0 +1,27 @@
+# Alpine runtime — smaller, musl libc. Verify native dependencies before using in prod.
+# Build:  docker build -f Dockerfile.alpine -t jorgenhoc-sample:alpine .
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS restore
+WORKDIR /src
+COPY ["JorgenHoc.DotnetDockerContainer.csproj", "./"]
+RUN dotnet restore "JorgenHoc.DotnetDockerContainer.csproj"
+
+FROM restore AS publish
+COPY . .
+RUN dotnet publish "JorgenHoc.DotnetDockerContainer.csproj" \
+    -c Release --no-restore -o /app/publish -p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS final
+
+# Alpine uses BusyBox adduser — different flags from Debian's adduser.
+RUN addgroup -S appgroup && adduser -S -G appgroup appuser
+
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+EXPOSE 8080
+
+USER appuser
+ENTRYPOINT ["dotnet", "JorgenHoc.DotnetDockerContainer.dll"]

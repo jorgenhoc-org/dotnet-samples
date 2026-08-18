@@ -5,8 +5,9 @@
   </Folder>
   <Folder Name="/samples/">
     <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
+    <Project Path="samples/dotnet-docker-container/JorgenHoc.DotnetDockerContainer.csproj" Id="bc99d294-7d98-4362-8113-fe3a67ab0f81" />
     <Project Path="samples/valuetask-vs-task-csharp/JorgenHoc.ValueTaskVsTask.csproj" />
-    <Project Path="samples/web/JorgenHoc.SampleWeb/JorgenHoc.SampleWeb.csproj" />
+    <Project Path="samples/web/JorgenHoc.SampleWeb.csproj" />
   </Folder>
   <Folder Name="/benchmarks/">
     <Project Path="benchmarks/JorgenHoc.Benchmarks/JorgenHoc.Benchmarks.csproj" />

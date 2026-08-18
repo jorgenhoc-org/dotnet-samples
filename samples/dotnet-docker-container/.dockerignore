@@ -1,0 +1,15 @@
+# Keep build output and local cruft out of the build context. Without this, `COPY . .`
+# ships your bin/obj into the image, invalidates the layer cache on every local build,
+# and risks copying secrets from .env files.
+**/bin/
+**/obj/
+**/.vs/
+**/.git/
+**/.gitignore
+**/node_modules/
+**/*.user
+**/appsettings.*.Local.json
+**/.env
+Dockerfile*
+.dockerignore
+README.md

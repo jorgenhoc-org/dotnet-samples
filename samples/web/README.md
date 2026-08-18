@@ -10,7 +10,7 @@ Seed the database first (see
 [`samples/ef-core-n-plus-one`](../../ef-core-n-plus-one/README.md)), then:
 
 ```bash
-cd samples/web/JorgenHoc.SampleWeb
+cd samples/web
 dotnet run
 ```
 

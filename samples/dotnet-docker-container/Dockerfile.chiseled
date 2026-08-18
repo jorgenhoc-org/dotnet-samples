@@ -1,0 +1,29 @@
+# Ubuntu Chiseled runtime — smallest, no shell, no package manager.
+# Build:  docker build -f Dockerfile.chiseled -t jorgenhoc-sample:chiseled .
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS restore
+WORKDIR /src
+COPY ["JorgenHoc.DotnetDockerContainer.csproj", "./"]
+RUN dotnet restore "JorgenHoc.DotnetDockerContainer.csproj"
+
+FROM restore AS publish
+COPY . .
+RUN dotnet publish "JorgenHoc.DotnetDockerContainer.csproj" \
+    -c Release --no-restore -o /app/publish -p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled AS final
+
+# No RUN adduser here — there is no shell to run it with. Chiseled images ship a
+# non-root user `app` (UID 64198) already, so just select it.
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+EXPOSE 8080
+
+USER app
+
+# A HEALTHCHECK is impossible here: CMD needs /bin/sh, which chiseled does not have.
+# Health checking belongs to the orchestrator (Kubernetes probes, ECS, Azure) instead.
+ENTRYPOINT ["dotnet", "JorgenHoc.DotnetDockerContainer.dll"]

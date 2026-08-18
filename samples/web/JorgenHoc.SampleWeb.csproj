@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\shared\JorgenHoc.DataAccess\JorgenHoc.DataAccess.csproj" />
+    <ProjectReference Include="..\..\shared\JorgenHoc.DataAccess\JorgenHoc.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
