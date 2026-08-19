@@ -29,6 +29,9 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | Article | Code |
 |---|---|
 | [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web) (MiniProfiler) |
+| [EF Core global query filters](https://www.jorgenhoc.org/en/blog/ef-core-global-query-filters) | [`samples/ef-core-global-query-filters`](samples/ef-core-global-query-filters) (console) |
+| [EF Core many-to-many relationships](https://www.jorgenhoc.org/en/blog/ef-core-many-to-many) | [`samples/ef-core-many-to-many`](samples/ef-core-many-to-many) (console) |
+| [EF Core one-to-many relationships](https://www.jorgenhoc.org/en/blog/ef-core-one-to-many) | [`samples/ef-core-one-to-many`](samples/ef-core-one-to-many) (console) |
 | [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`samples/valuetask-vs-task-csharp`](samples/valuetask-vs-task-csharp) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
 | [Dockerizing a .NET application](https://www.jorgenhoc.org/en/blog/dotnet-docker-container) | [`samples/dotnet-docker-container`](samples/dotnet-docker-container) |
 | [Azure App Service for .NET](https://www.jorgenhoc.org/en/blog/azure-app-service-dotnet) | [`samples/azure-app-service-dotnet`](samples/azure-app-service-dotnet) |

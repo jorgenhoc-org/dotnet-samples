@@ -9,6 +9,9 @@
     <Project Path="samples/cancellationtoken-csharp/JorgenHoc.CancellationPatterns.csproj" />
     <Project Path="samples/configureawait-false-csharp/JorgenHoc.ConfigureAwaitFalse.csproj" />
     <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
+    <Project Path="samples/ef-core-global-query-filters/JorgenHoc.EfCoreGlobalQueryFilters.csproj" />
+    <Project Path="samples/ef-core-many-to-many/JorgenHoc.EfCoreManyToMany.csproj" />
+    <Project Path="samples/ef-core-one-to-many/JorgenHoc.EfCoreOneToMany.csproj" />
     <Project Path="samples/iasyncenumerable-csharp/JorgenHoc.AsyncStreams.csproj" />
     <Project Path="samples/ef-core-vs-dapper/JorgenHoc.EfCoreVsDapper.csproj" />
     <Project Path="samples/azure-app-service-dotnet/JorgenHoc.AzureAppServiceDotnet.csproj" />
