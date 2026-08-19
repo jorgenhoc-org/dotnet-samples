@@ -34,6 +34,8 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | [Azure App Service for .NET](https://www.jorgenhoc.org/en/blog/azure-app-service-dotnet) | [`samples/azure-app-service-dotnet`](samples/azure-app-service-dotnet) |
 | [EF Core vs Dapper](https://www.jorgenhoc.org/en/blog/ef-core-vs-dapper) | [`samples/ef-core-vs-dapper`](samples/ef-core-vs-dapper) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
 | [How to avoid async deadlocks](https://www.jorgenhoc.org/en/blog/async-deadlocks-csharp) | [`samples/async-deadlocks-csharp`](samples/async-deadlocks-csharp) |
+| [ConfigureAwait(false) explained](https://www.jorgenhoc.org/en/blog/configureawait-false-csharp) | [`samples/configureawait-false-csharp`](samples/configureawait-false-csharp) |
+| [CancellationToken practical patterns](https://www.jorgenhoc.org/en/blog/cancellationtoken-csharp) | [`samples/cancellationtoken-csharp`](samples/cancellationtoken-csharp) |
 
 More being ported — one per article.
 
