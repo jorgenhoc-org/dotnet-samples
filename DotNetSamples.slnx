@@ -13,6 +13,7 @@
     <Project Path="samples/ef-core-vs-dapper/JorgenHoc.EfCoreVsDapper.csproj" />
     <Project Path="samples/azure-app-service-dotnet/JorgenHoc.AzureAppServiceDotnet.csproj" />
     <Project Path="samples/dotnet-docker-container/JorgenHoc.DotnetDockerContainer.csproj" Id="bc99d294-7d98-4362-8113-fe3a67ab0f81" />
+    <Project Path="samples/dotnet-hosting/JorgenHoc.DotnetHosting.csproj" />
     <Project Path="samples/valuetask-vs-task-csharp/JorgenHoc.ValueTaskVsTask.csproj" />
     <Project Path="samples/web/JorgenHoc.SampleWeb.csproj" />
   </Folder>

@@ -1,0 +1,20 @@
+# DigitalOcean App Platform — deploy with: doctl apps create --spec digitalocean-app.yaml
+# Cheapest always-on container in 2026: $5/month (512 MiB RAM, 1 shared vCPU).
+name: jorgenhoc-hosting-sample
+region: nyc
+services:
+  - name: api
+    dockerfile_path: Dockerfile
+    github:
+      repo: jorgenhoc-org/dotnet-samples
+      branch: main
+      deploy_on_push: true
+    source_dir: samples/dotnet-hosting
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    instance_count: 1
+    http_port: 8080
+    health_check:
+      http_path: /health
+    envs:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production

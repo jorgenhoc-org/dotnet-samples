@@ -1,0 +1,27 @@
+# Azure Container Apps — az containerapp create --yaml azure-container-apps.yaml
+# Consumption plan free grant (per subscription, per month):
+#   180,000 vCPU-seconds + 360,000 GiB-seconds + 2,000,000 requests.
+# With minReplicas: 0 a low-traffic app can stay inside the grant indefinitely.
+properties:
+  configuration:
+    ingress:
+      external: true
+      targetPort: 8080
+  template:
+    containers:
+      - name: jorgenhoc-hosting-sample
+        image: myregistry.azurecr.io/jorgenhoc-hosting-sample:latest
+        resources:
+          cpu: 0.25 # minimum allocation
+          memory: 0.5Gi
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Production
+        probes:
+          - type: Readiness
+            httpGet:
+              path: /health
+              port: 8080
+    scale:
+      minReplicas: 0 # scale to zero when idle (free-grant friendly, adds cold start)
+      maxReplicas: 3

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <!-- TargetFramework is set explicitly rather than inherited from
+         Directory.Build.props: the Docker build context is this folder, so the repo-root
+         props file is not present inside the image and the build would fail without it.
+         A reader copying this folder on its own gets a project that still builds. -->
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The Web SDK's default content glob (**/*.json) would otherwise publish
+         deploy/railway.json into wwwroot — deploy configs are inputs to platform CLIs,
+         not app content. -->
+    <Content Remove="deploy/**" />
+    <None Include="deploy/**" />
+  </ItemGroup>
+
+</Project>

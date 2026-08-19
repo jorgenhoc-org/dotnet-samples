@@ -40,8 +40,13 @@ dotnet publish -c Release -o ./publish
 if command -v zip >/dev/null 2>&1; then
   (cd ./publish && zip -qr ../app.zip .)
 else
-  # ponytail: Git Bash on Windows has no zip; Compress-Archive does the same job
-  powershell.exe -NoProfile -Command "Compress-Archive -Path ./publish/* -DestinationPath ./app.zip -Force"
+  # Git Bash on Windows has no zip. Do NOT substitute Compress-Archive: it writes
+  # backslash entry names, and Linux Kudu's rsync fails on them with
+  # "Invalid argument (22)" as soon as publish/ contains a subfolder.
+  # Windows ships bsdtar in System32, which writes correct forward-slash zips.
+  # '*' (expanded by bash) rather than '.': with '.' bsdtar prefixes entries with ./,
+  # which Kudu accepts but Windows Explorer displays as an empty zip.
+  (cd ./publish && /c/Windows/System32/tar.exe -a -cf ../app.zip *)
 fi
 az webapp deploy --resource-group "$RG" --name "$APP" --src-path app.zip --type zip -o none
 

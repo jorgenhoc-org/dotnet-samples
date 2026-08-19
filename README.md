@@ -38,6 +38,7 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | [CancellationToken practical patterns](https://www.jorgenhoc.org/en/blog/cancellationtoken-csharp) | [`samples/cancellationtoken-csharp`](samples/cancellationtoken-csharp) |
 | [Async exception handling](https://www.jorgenhoc.org/en/blog/async-exception-handling-csharp) | [`samples/async-exception-handling-csharp`](samples/async-exception-handling-csharp) |
 | [IAsyncEnumerable — streaming data](https://www.jorgenhoc.org/en/blog/iasyncenumerable-csharp) | [`samples/iasyncenumerable-csharp`](samples/iasyncenumerable-csharp) |
+| [Best .NET hosting](https://www.jorgenhoc.org/en/blog/best-dotnet-hosting) · [Cheapest .NET hosting](https://www.jorgenhoc.org/en/blog/cheapest-dotnet-hosting) | [`samples/dotnet-hosting`](samples/dotnet-hosting) (one app + every platform's deploy config) |
 
 More being ported — one per article.
 

@@ -1,0 +1,5 @@
+# Caddy reverse proxy for the systemd-hosted app — automatic HTTPS via Let's Encrypt.
+# This one file replaces the nginx config + certbot setup entirely.
+yourdomain.com {
+	reverse_proxy localhost:5000
+}

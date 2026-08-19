@@ -1,0 +1,20 @@
+# Oracle Cloud Always Free VM (or any Linux VM) — systemd unit.
+# Publish for the VM's architecture first; Ampere A1 free VMs are Arm:
+#   dotnet publish -c Release -r linux-arm64 --self-contained true -o ./publish
+# Install: copy to /etc/systemd/system/, then:
+#   sudo systemctl enable --now jorgenhoc-hosting
+[Unit]
+Description=JorgenHoc hosting sample
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/jorgenhoc-hosting
+ExecStart=/opt/jorgenhoc-hosting/JorgenHoc.DotnetHosting
+Restart=always
+RestartSec=10
+User=www-data
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://localhost:5000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,31 @@
+# Fly.io — deploy with: fly launch --copy-config, then fly deploy
+# Pricing note (2026): new orgs get a short free trial, not a free allowance;
+# a shared-cpu-1x 256MB machine runs ~$2/month.
+app = "jorgenhoc-hosting-sample"
+primary_region = "iad"
+
+[build]
+  dockerfile = "../Dockerfile"
+
+[env]
+  ASPNETCORE_ENVIRONMENT = "Production"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true   # stop when idle to save cost
+  auto_start_machines = true  # start on first request (cold start)
+  min_machines_running = 0    # set to 1 to avoid cold starts (always billed)
+
+[checks]
+  [checks.health]
+    grace_period = "10s"
+    interval = "30s"
+    method = "GET"
+    path = "/health"
+    timeout = "5s"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1

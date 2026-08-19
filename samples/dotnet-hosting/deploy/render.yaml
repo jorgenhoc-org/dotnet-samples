@@ -1,0 +1,15 @@
+# Render — blueprint (infrastructure as code). Connect the repo and Render applies this.
+# Free plan: 0.1 CPU / 512 MB, spins down after 15 min idle, 750 instance-hours/month.
+# Render injects PORT at runtime; the app reads it in Program.cs.
+services:
+  - type: web
+    name: jorgenhoc-hosting-sample
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+# Free Render Postgres expires 30 days after creation (1 GB, no backups).
+# For persistent free data use an external provider such as Neon instead.
