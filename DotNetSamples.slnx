@@ -5,9 +5,11 @@
   </Folder>
   <Folder Name="/samples/">
     <Project Path="samples/async-deadlocks-csharp/JorgenHoc.AsyncDeadlocks.csproj" />
+    <Project Path="samples/async-exception-handling-csharp/JorgenHoc.AsyncExceptionHandling.csproj" />
     <Project Path="samples/cancellationtoken-csharp/JorgenHoc.CancellationPatterns.csproj" />
     <Project Path="samples/configureawait-false-csharp/JorgenHoc.ConfigureAwaitFalse.csproj" />
     <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
+    <Project Path="samples/iasyncenumerable-csharp/JorgenHoc.AsyncStreams.csproj" />
     <Project Path="samples/ef-core-vs-dapper/JorgenHoc.EfCoreVsDapper.csproj" />
     <Project Path="samples/azure-app-service-dotnet/JorgenHoc.AzureAppServiceDotnet.csproj" />
     <Project Path="samples/dotnet-docker-container/JorgenHoc.DotnetDockerContainer.csproj" Id="bc99d294-7d98-4362-8113-fe3a67ab0f81" />

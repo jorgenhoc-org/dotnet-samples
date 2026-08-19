@@ -36,6 +36,8 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | [How to avoid async deadlocks](https://www.jorgenhoc.org/en/blog/async-deadlocks-csharp) | [`samples/async-deadlocks-csharp`](samples/async-deadlocks-csharp) |
 | [ConfigureAwait(false) explained](https://www.jorgenhoc.org/en/blog/configureawait-false-csharp) | [`samples/configureawait-false-csharp`](samples/configureawait-false-csharp) |
 | [CancellationToken practical patterns](https://www.jorgenhoc.org/en/blog/cancellationtoken-csharp) | [`samples/cancellationtoken-csharp`](samples/cancellationtoken-csharp) |
+| [Async exception handling](https://www.jorgenhoc.org/en/blog/async-exception-handling-csharp) | [`samples/async-exception-handling-csharp`](samples/async-exception-handling-csharp) |
+| [IAsyncEnumerable — streaming data](https://www.jorgenhoc.org/en/blog/iasyncenumerable-csharp) | [`samples/iasyncenumerable-csharp`](samples/iasyncenumerable-csharp) |
 
 More being ported — one per article.
 
