@@ -31,11 +31,14 @@ Each `samples/` folder has its own README with what to run and what output to ex
 | [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web) (MiniProfiler) |
 | [EF Core global query filters](https://www.jorgenhoc.org/en/blog/ef-core-global-query-filters) | [`samples/ef-core-global-query-filters`](samples/ef-core-global-query-filters) (console) |
 | [EF Core many-to-many relationships](https://www.jorgenhoc.org/en/blog/ef-core-many-to-many) | [`samples/ef-core-many-to-many`](samples/ef-core-many-to-many) (console) |
+| [EF Core migrations walkthrough](https://www.jorgenhoc.org/en/blog/ef-core-migrations-walkthrough) | [`samples/ef-core-migrations-walkthrough`](samples/ef-core-migrations-walkthrough) (console + real migration files) |
+| [EF Core raw SQL queries](https://www.jorgenhoc.org/en/blog/ef-core-raw-sql) | [`samples/ef-core-raw-sql`](samples/ef-core-raw-sql) (console) |
 | [EF Core one-to-many relationships](https://www.jorgenhoc.org/en/blog/ef-core-one-to-many) | [`samples/ef-core-one-to-many`](samples/ef-core-one-to-many) (console) |
 | [ValueTask vs Task in C#](https://www.jorgenhoc.org/en/blog/valuetask-vs-task-csharp) | [`samples/valuetask-vs-task-csharp`](samples/valuetask-vs-task-csharp) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
 | [Dockerizing a .NET application](https://www.jorgenhoc.org/en/blog/dotnet-docker-container) | [`samples/dotnet-docker-container`](samples/dotnet-docker-container) |
 | [Azure App Service for .NET](https://www.jorgenhoc.org/en/blog/azure-app-service-dotnet) | [`samples/azure-app-service-dotnet`](samples/azure-app-service-dotnet) |
 | [EF Core vs Dapper](https://www.jorgenhoc.org/en/blog/ef-core-vs-dapper) | [`samples/ef-core-vs-dapper`](samples/ef-core-vs-dapper) (console) · [`benchmarks/JorgenHoc.Benchmarks`](benchmarks/JorgenHoc.Benchmarks) |
+| [async/await vs Task.Run](https://www.jorgenhoc.org/en/blog/async-await-vs-task-run) | [`samples/async-await-vs-task-run`](samples/async-await-vs-task-run) |
 | [How to avoid async deadlocks](https://www.jorgenhoc.org/en/blog/async-deadlocks-csharp) | [`samples/async-deadlocks-csharp`](samples/async-deadlocks-csharp) |
 | [ConfigureAwait(false) explained](https://www.jorgenhoc.org/en/blog/configureawait-false-csharp) | [`samples/configureawait-false-csharp`](samples/configureawait-false-csharp) |
 | [CancellationToken practical patterns](https://www.jorgenhoc.org/en/blog/cancellationtoken-csharp) | [`samples/cancellationtoken-csharp`](samples/cancellationtoken-csharp) |
