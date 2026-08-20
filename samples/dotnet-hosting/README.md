@@ -47,3 +47,17 @@ cd samples/dotnet-hosting
 No cloud account needed. With Docker running, the container assertions run too;
 without it they are skipped. Deployments themselves (and the screenshots in the
 articles) are done against real provider accounts.
+
+## Benchmark
+
+[`benchmark/k6-latency.js`](benchmark/k6-latency.js) is the k6 script behind the
+latency numbers in the Render article: a fixed 30 req/s for 60 s against each deployed
+platform, comparing latency distributions at equal load. Run it against any deployment:
+
+```bash
+k6 run -e TARGET=https://your-app.example.com benchmark/k6-latency.js
+```
+
+Published numbers disclose the client location — with a fixed arrival rate the
+distribution is dominated by the path between the client and the provider's region,
+which is exactly what a user in that location experiences.
