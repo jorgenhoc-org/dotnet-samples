@@ -30,6 +30,7 @@ Each `samples/` folder has its own README with what to run and what output to ex
 |---|---|
 | [Solving the N+1 query problem](https://www.jorgenhoc.org/en/blog/ef-core-n-plus-one) | [`samples/ef-core-n-plus-one`](samples/ef-core-n-plus-one) (console) · [`samples/web`](samples/web) (MiniProfiler) |
 | [EF Core global query filters](https://www.jorgenhoc.org/en/blog/ef-core-global-query-filters) | [`samples/ef-core-global-query-filters`](samples/ef-core-global-query-filters) (console) |
+| [Caching EF Core queries with HybridCache](https://www.jorgenhoc.org/en/blog/ef-core-hybridcache) | [`samples/ef-core-hybridcache`](samples/ef-core-hybridcache) (console) |
 | [EF Core many-to-many relationships](https://www.jorgenhoc.org/en/blog/ef-core-many-to-many) | [`samples/ef-core-many-to-many`](samples/ef-core-many-to-many) (console) |
 | [EF Core migrations walkthrough](https://www.jorgenhoc.org/en/blog/ef-core-migrations-walkthrough) | [`samples/ef-core-migrations-walkthrough`](samples/ef-core-migrations-walkthrough) (console + real migration files) |
 | [EF Core raw SQL queries](https://www.jorgenhoc.org/en/blog/ef-core-raw-sql) | [`samples/ef-core-raw-sql`](samples/ef-core-raw-sql) (console) |
