@@ -12,6 +12,7 @@
     <Project Path="samples/ef-core-migrations-walkthrough/JorgenHoc.EfCoreMigrationsWalkthrough.csproj" />
     <Project Path="samples/ef-core-n-plus-one/JorgenHoc.EfCoreNPlusOne.csproj" />
     <Project Path="samples/ef-core-global-query-filters/JorgenHoc.EfCoreGlobalQueryFilters.csproj" />
+    <Project Path="samples/ef-core-hybridcache/JorgenHoc.EfCoreHybridCache.csproj" />
     <Project Path="samples/ef-core-many-to-many/JorgenHoc.EfCoreManyToMany.csproj" />
     <Project Path="samples/ef-core-one-to-many/JorgenHoc.EfCoreOneToMany.csproj" />
     <Project Path="samples/ef-core-raw-sql/JorgenHoc.EfCoreRawSql.csproj" />
